@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "Enter the number of tasks: "
+read num_tasks
+
+for ((i=1; i<=num_tasks; i++))
+do
+    echo "Task $i: "
+    
+    echo "Enter the name of the task: "
+    read task_name
+    
+    echo "Creating file for task $i..."
+    touch "$task_name"
+    
+    echo "Enter the name of the file: "
+    read file_name
+    
+    
+    chmod +x "$file_name"
+    
+    echo "File created and made executable."
+    echo "-----------------------------"
+done
